@@ -2,8 +2,9 @@ PROJECT_NAME     := ble_app_template_pca10040e_s112
 TARGETS          := nrf52810_xxaa
 OUTPUT_DIRECTORY := _build
 
-SDK_ROOT := ../../../../../..
-PROJ_DIR := ../../..
+PROJ_DIR := ../../../..
+SRC_DIR  := $(PROJ_DIR)/src
+SDK_ROOT := $(PROJ_DIR)/nrf_sdk
 
 $(OUTPUT_DIRECTORY)/nrf52810_xxaa.out: \
   LINKER_SCRIPT  := ble_app_template_gcc_nrf52.ld
@@ -56,7 +57,7 @@ SRC_FILES += \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_uarte.c \
   $(SDK_ROOT)/components/libraries/bsp/bsp.c \
   $(SDK_ROOT)/components/libraries/bsp/bsp_btn_ble.c \
-  $(PROJ_DIR)/main.c \
+  $(SRC_DIR)/main.c \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT.c \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT_Syscalls_GCC.c \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT_printf.c \
@@ -197,6 +198,7 @@ LIB_FILES += \
 OPT = -Os -g3
 # Uncomment the line below to enable link time optimization
 #OPT += -flto
+OPT += -DDEBUG
 
 # C flags common to all targets
 CFLAGS += $(OPT)

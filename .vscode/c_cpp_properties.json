@@ -1,0 +1,73 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/boards/${config:board}/${config:softdevice}/**",
+                "${workspaceFolder}/src/**",
+                "${config:nrf_sdk_root}/modules/**",
+                "${config:nrf_sdk_root}/components",
+                "${config:nrf_sdk_root}/components/802_15_4/**",
+                "${config:nrf_sdk_root}/components/ant/**",
+                "${config:nrf_sdk_root}/components/ble/**",
+                "${config:nrf_sdk_root}/components/boards/**",
+                "${config:nrf_sdk_root}/components/drivers_ext/**",
+                "${config:nrf_sdk_root}/components/drivers_nrf/**",
+                "${config:nrf_sdk_root}/components/libraries/**",
+                "${config:nrf_sdk_root}/components/nfc/**",
+                "${config:nrf_sdk_root}/components/proprietary_rf/**",
+                "${config:nrf_sdk_root}/components/serialization/**",
+                "${config:nrf_sdk_root}/components/softdevice/common/**",
+                "${config:nrf_sdk_root}/components/softdevice/${config:softdevice}/**",
+                "${config:nrf_sdk_root}/components/toolchain/**",
+                "${config:nrf_sdk_root}/integration/**",
+                "${config:nrf_sdk_root}/external/**",
+                "${env:ARM_GCC}/include/**"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false,
+                "path": [
+                    "${workspaceFolder}/boards/${config:board}/${config:softdevice}/**",
+                    "${workspaceFolder}/src/**",
+                    "${config:nrf_sdk_root}/modules/**",
+                    "${config:nrf_sdk_root}/components",
+                    "${config:nrf_sdk_root}/components/802_15_4/**",
+                    "${config:nrf_sdk_root}/components/ant/**",
+                    "${config:nrf_sdk_root}/components/ble/**",
+                    "${config:nrf_sdk_root}/components/boards/**",
+                    "${config:nrf_sdk_root}/components/drivers_ext/**",
+                    "${config:nrf_sdk_root}/components/drivers_nrf/**",
+                    "${config:nrf_sdk_root}/components/libraries/**",
+                    "${config:nrf_sdk_root}/components/nfc/**",
+                    "${config:nrf_sdk_root}/components/proprietary_rf/**",
+                    "${config:nrf_sdk_root}/components/serialization/**",
+                    "${config:nrf_sdk_root}/components/softdevice/common/**",
+                    "${config:nrf_sdk_root}/components/softdevice/${config:softdevice}/**",
+                    "${config:nrf_sdk_root}/components/toolchain/**",
+                    "${config:nrf_sdk_root}/integration/**",
+                    "${config:nrf_sdk_root}/external/**",
+                    "${env:ARM_GCC}/include/**"
+                ]
+            },
+            "defines": [
+                // "CUSTOM_BOARD_INC=board_ble_finder",
+                "DEBUG",
+                "APP_TIMER_V2",
+                "APP_TIMER_V2_RTC1_ENABLED",
+                "BOARD_PCA10040",
+                "CONFIG_GPIO_AS_PINRESET",
+                "DEVELOP_IN_NRF52832",
+                "FLOAT_ABI_SOFT",
+                "NRF52810_XXAA",
+                "NRF_SD_BLE_API_VERSION=7",
+                "S112",
+                "SOFTDEVICE_PRESENT"
+            ],
+            "compilerPath": "${env:ARM_GCC}/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "${default}"
+        }
+    ],
+    "version": 4
+}
