@@ -1,7 +1,7 @@
-Program and Debug with OpenOCD
+Program with OpenOCD
 ====
 
-# Program
+## Program
 ```
 /usr/bin/openocd -s /usr/share/openocd/scripts/ -f daplink.cfg -c 'init' -c 'halt' -c 'program nrf52810_xxaa.hex verify reset'
 ```
