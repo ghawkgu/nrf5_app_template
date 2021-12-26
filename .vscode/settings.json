@@ -4,7 +4,7 @@
     "nrf_sdk_root": "${workspaceRoot}/nrf_sdk",
     "cmake.configureOnOpen": false,
     "files.associations": {
-    },
-    "kconfig.zephyr.west": "west",
-    "kconfig.zephyr.base": "/home/guyi/biz-workspace/ncs/zephyr"
+	"*.h": "c",
+	"*.c": "c"
+    }
 }

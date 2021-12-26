@@ -6,6 +6,8 @@
     "configurations": [
         {
             "armToolchainPath": "${env:ARM_GCC}/bin",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "showDevDebugOutput": false,
             "cwd": "${workspaceRoot}",
             "executable": "./boards/${config:board}/${config:softdevice}/armgcc/_build/nrf52810_xxaa.out",
             "name": "GDB over J-Link",
@@ -21,6 +23,8 @@
         },
         {
             "armToolchainPath": "${env:ARM_GCC}/bin",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "showDevDebugOutput": false,
             "cwd": "${workspaceRoot}",
             "executable": "./boards/${config:board}/${config:softdevice}/armgcc/_build/nrf52810_xxaa.out",
             "name": "GDB over openocd",
